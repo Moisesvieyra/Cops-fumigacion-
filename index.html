@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPS Control de Plagas | Control profesional en Cancún y Quintana Roo</title>
+    <meta name="description" content="Servicios de control de plagas para hogares, comercios, restaurantes y hoteles en Cancún, Playa del Carmen e Isla Mujeres. Solicita una cotización con COPS.">
+    <meta name="theme-color" content="#0f3816">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="COPS Control de Plagas">
+    <meta property="og:description" content="Control profesional de plagas en Cancún y Quintana Roo. Cotiza tu servicio por WhatsApp.">
+    <meta property="og:image" content="cops.png">
+    <link rel="icon" type="image/png" href="cops.png">
+    <link rel="preload" as="image" href="cops.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cops: {
+                            50: '#f1f8f3',
+                            100: '#dcefdc',
+                            200: '#bddfbe',
+                            300: '#95c697',
+                            400: '#67a76a',
+                            500: '#438947',
+                            600: '#2e7d32', // Main green from logo
+                            700: '#1e7e34', // Dark green accents
+                            800: '#1b5e20',
+                            900: '#0f3816',
+                            accent: '#20c997'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .chat-bubble-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .brand-logo {
+            width: 3.5rem;
+            height: 3.5rem;
+            object-fit: contain;
+            flex: 0 0 auto;
+        }
+        .brand-logo-large {
+            width: min(12rem, 65%);
+            height: 8rem;
+            object-fit: contain;
+            margin-inline: auto;
+        }
+        a, button, input, select { -webkit-tap-highlight-color: transparent; }
+        :focus-visible {
+            outline: 3px solid #67a76a;
+            outline-offset: 3px;
+        }
+        [id] { scroll-margin-top: 6rem; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2e7d32;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-cops-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-cops-900 text-white text-xs md:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <span class="bg-cops-600 text-white font-bold px-2 py-0.5 rounded-full text-xs animate-pulse">Atención profesional</span>
+                <span>🌱 Control de plagas para hogares y negocios en Cancún y Quintana Roo</span>
+            </div>
+            <div class="flex items-center gap-4 text-cops-100 font-medium">
+                <a href="tel:+529981523517" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-xs text-cops-300"></i> +52 998 152 3517
+                </a>
+                <span class="text-cops-700">|</span>
+                <a href="mailto:copscontrol.72@hotmail.com" class="hover:text-white transition-colors flex items-center gap-1.5 hidden sm:flex">
+                    <i class="fa-solid fa-envelope text-xs text-cops-300"></i> copscontrol.72@hotmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logotipo oficial COPS -->
+                <a href="#inicio" class="flex items-center gap-3 group" aria-label="COPS Control de Plagas, ir al inicio">
+                    <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo group-hover:scale-105 transition-transform" width="56" height="56" fetchpriority="high">
+                    <div>
+                        <span class="text-xl md:text-2xl font-extrabold tracking-tight text-cops-900 block leading-tight">
+                            COPS <span class="text-cops-600">CONTROL DE PLAGAS</span>
+                        </span>
+                        <span class="text-xs text-gray-500 font-medium tracking-wide block">Empresa mexicana</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                    <a href="#inicio" class="hover:text-cops-600 transition-colors py-1">Inicio</a>
+                    <a href="#nosotros" class="hover:text-cops-600 transition-colors py-1">Nosotros</a>
+                    <a href="#servicios" class="hover:text-cops-600 transition-colors py-1">Servicios</a>
+                    <a href="#cobertura" class="hover:text-cops-600 transition-colors py-1">Cobertura</a>
+                    <a href="#cotizador" class="hover:text-cops-600 transition-colors py-1">Solicitar cotización</a>
+                    <a href="#faq" class="hover:text-cops-600 transition-colors py-1">Preguntas Frecuentes</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="https://wa.me/5219988541612?text=Hola%20COPS%20Control%20de%20Plagas,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-2 bg-cops-600 hover:bg-cops-700 text-white font-bold px-5 py-2.5 rounded-full shadow-lg shadow-cops-600/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Cotizar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-cops-700 hover:bg-cops-50 focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Inicio</a>
+            <a href="#nosotros" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Nosotros</a>
+            <a href="#servicios" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Servicios</a>
+            <a href="#cobertura" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Cobertura</a>
+            <a href="#cotizador" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Solicitar cotización</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Preguntas Frecuentes</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5219988541612?text=Hola%20COPS%20Control%20de%20Plagas,%20deseo%20atenci%C3%B3n%20inmediata" 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="w-full flex items-center justify-center gap-2 bg-cops-600 text-white font-bold py-3 rounded-xl shadow">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Contactar por WhatsApp
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative bg-gradient-to-br from-cops-900 via-cops-800 to-cops-900 text-white overflow-hidden py-16 md:py-24">
+        <!-- Subtle Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2e7d32_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cops-500/20 border border-cops-400/30 text-cops-200 text-xs md:text-sm font-semibold">
+                        <i class="fa-solid fa-shield-virus text-cops-300"></i>
+                        <span>Control profesional de plagas en Quintana Roo</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                        Protege tu hogar y negocio con <span class="text-transparent bg-clip-text bg-gradient-to-r from-cops-300 via-green-300 to-emerald-200">soluciones profesionales de control de plagas</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-cops-100/90 max-w-2xl font-normal leading-relaxed">
+                        Atención para problemas de cucarachas, chinches, roedores y otras plagas. Evaluamos cada espacio para recomendar un tratamiento y medidas de prevención adecuadas.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="https://wa.me/5219988541612?text=Hola%20COPS,%20quiero%20cotizar%20un%20servicio%20de%20fumigaci%C3%B3n" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center gap-3 bg-cops-500 hover:bg-cops-400 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl shadow-cops-600/40 transform hover:-translate-y-1 transition-all">
+                            <i class="fa-brands fa-whatsapp text-2xl text-green-200"></i>
+                            <span>Solicitar cotización por WhatsApp</span>
+                        </a>
+                        <a href="#cotizador" 
+                           class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-lg px-6 py-4 rounded-xl backdrop-blur-sm border border-white/20 transition-all">
+                            <i class="fa-solid fa-calculator text-cops-300"></i>
+                            <span>Solicitud de cotización</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-6 border-t border-cops-700/60 grid grid-cols-3 gap-4 text-center sm:text-left">
+                        <div>
+                            <span class="block text-2xl font-extrabold text-white">100%</span>
+                            <span class="text-xs text-cops-200 font-medium">Empresa Mexicana</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-extrabold text-white">PC</span>
+                            <span class="text-xs text-cops-200 font-medium">Aplicación responsable</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-extrabold text-white">Q. Roo</span>
+                            <span class="text-xs text-cops-200 font-medium">Cobertura regional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Card / Badge Visual -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+                        
+                        <!-- Header Status Badge -->
+                        <div class="flex items-center justify-between bg-cops-900/60 p-4 rounded-2xl border border-cops-600/30">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                                <span class="text-sm font-semibold text-white">Atención en la región</span>
+                            </div>
+                            <span class="text-xs bg-cops-500/40 text-cops-200 px-2.5 py-1 rounded-md font-mono">Cancún & Riviera</span>
+                        </div>
+
+                        <!-- Brand Crest -->
+                        <div class="text-center py-4 bg-gradient-to-b from-cops-800/80 to-cops-900/80 rounded-2xl border border-cops-700/50 p-6">
+                            <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo-large mb-3" width="192" height="128" loading="eager">
+                            <h3 class="text-xl font-bold text-white">COPS Control de Plagas</h3>
+                            <p class="text-xs text-cops-200 mt-1">#EscogeConSeguridad #EscogeCOPSCONTROLDEPLAGAS</p>
+                        </div>
+
+                        <!-- Quick Highlights Checklist -->
+                        <div class="space-y-2.5 text-sm">
+                            <div class="flex items-center gap-3 text-cops-100">
+                                <i class="fa-solid fa-circle-check text-cops-400"></i>
+                                <span>Documentación del servicio según corresponda</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-cops-100">
+                                <i class="fa-solid fa-circle-check text-cops-400"></i>
+                                <span>Productos seleccionados según el tratamiento</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-cops-100">
+                                <i class="fa-solid fa-circle-check text-cops-400"></i>
+                                <span>Indicaciones claras antes y después del servicio</span>
+                            </div>
+                        </div>
+
+                        <a href="tel:+529981523517" class="w-full bg-white hover:bg-cops-50 text-cops-900 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-solid fa-phone text-cops-600"></i>
+                            <span>Llamar: +52 998 152 3517</span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS / COMPROMISO ECOLÓGICO -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Decorative Graphic -->
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-cops-100 rounded-full filter blur-3xl opacity-60"></div>
+                    <div class="relative bg-gradient-to-br from-cops-50 to-emerald-50 p-8 sm:p-10 rounded-3xl border border-cops-100 shadow-xl space-y-6">
+                        <div class="inline-block bg-cops-600 text-white px-3.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+                            Empresa mexicana
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-cops-900 leading-tight">
+                            Especialistas en erradicar plagas cuidando lo que más te importa
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            En <strong>COPS Control de Plagas</strong> diseñamos e implementamos sistemas integrales de fumigación formulados para las condiciones de humedad y clima tropical de Cancún, Isla Mujeres y Playa del Carmen.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Seleccionamos métodos y productos de acuerdo con el tipo de plaga y las características del inmueble. Antes y después de la aplicación, compartimos las medidas de seguridad y prevención que correspondan al tratamiento.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 bg-white rounded-2xl shadow-sm border border-cops-100">
+                                <i class="fa-solid fa-leaf text-2xl text-cops-600 mb-2"></i>
+                                <h4 class="font-bold text-cops-900 text-sm">Aplicación responsable</h4>
+                                <p class="text-xs text-gray-500">Selección de productos y métodos según cada necesidad.</p>
+                            </div>
+                            <div class="p-4 bg-white rounded-2xl shadow-sm border border-cops-100">
+                                <i class="fa-solid fa-paw text-2xl text-cops-600 mb-2"></i>
+                                <h4 class="font-bold text-cops-900 text-sm">Orientación para el hogar</h4>
+                                <p class="text-xs text-gray-500">Recomendaciones para proteger a niños y mascotas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Info Column -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-cops-600 font-bold text-sm tracking-wide uppercase">
+                        <i class="fa-solid fa-shield text-cops-600"></i> ¿Por qué elegir COPS?
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                        Procedimientos adecuados y atención transparente
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Cada caso requiere una evaluación. Buscamos controlar el foco de infestación y reducir las condiciones que favorecen la presencia de plagas.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Feature 1 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-cops-50 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-cops-100 text-cops-700 flex items-center justify-center shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-microscope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">Diagnóstico de Precisión</h3>
+                                <p class="text-gray-600 text-sm">Identificamos la especie de plaga y sus rutas de acceso para aplicar la dosis óptima.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-cops-50 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-cops-100 text-cops-700 flex items-center justify-center shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-spray-can-sparkles"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">Métodos Modernos de Aspersión y Gel</h3>
+                                <p class="text-gray-600 text-sm">Termonebulización, microencapsulado y cebos específicos de grado profesional.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-cops-50 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-cops-100 text-cops-700 flex items-center justify-center shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">Documentación del servicio</h3>
+                                <p class="text-gray-600 text-sm">Consulta la disponibilidad de constancias y documentación de acuerdo con el servicio solicitado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#cotizador" class="inline-flex items-center gap-2 text-cops-700 font-bold hover:text-cops-800 text-lg group">
+                            <span>Calcular presupuesto para mi inmueble</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-cops-600 font-bold text-sm tracking-widest uppercase bg-cops-100 px-3 py-1 rounded-full">Nuestros Servicios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                    Soluciones integrales de exterminio y prevención
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Atendemos desde residencias y departamentos hasta hoteles, restaurantes, oficinas y bodegas industriales en todo Quintana Roo.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Rastreros -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bug"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Insectos Rastreros</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Control total de cucarachas (alemana, americana), hormigas, chinches de cama, arañas, alacranes y ciempiés.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Aplicación de gel inodoro</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Tratamiento de zonas de actividad</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Seguimiento según el tratamiento</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20necesito%20control%20de%20insectos%20rastreros" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Cotizar Rastreros
+                    </a>
+                </div>
+
+                <!-- Card 2: Roedores -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-otter"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Control de Roedores</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Desratización profesional de ratas y ratones mediante estaciones de cebado de alta seguridad y sellado de accesos.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Estaciones de cebo inviolables</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Medidas de protección para mascotas</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Trampeo y erradicación limpia</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20tengo%20un%20problema%20de%20roedores" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Cotizar Roedores
+                    </a>
+                </div>
+
+                <!-- Card 3: Voladores / Mosquitos -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mosquito"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mosquitos y Voladores</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Termonebulización de áreas verdes, jardines, patios y terrazas contra el mosquito transmisor de Dengue y mosca doméstica.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Niebla de ultra bajo volumen</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Neutralización de larvas</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Ideal para áreas al aire libre</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20me%20interesa%20fumigar%20mosquitos" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Cotizar Voladores
+                    </a>
+                </div>
+
+                <!-- Card 4: Fauna Nociva / Alacranes & Arañas -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-spider"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Fauna Nociva Especializada</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Atención para alacranes, arañas, chinches de cama y plagas que afectan la madera, previa valoración del caso.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Inspección minuciosa de rincones</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Tratamientos de choque</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Protección perimetral</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20necesito%20eliminar%20fauna%20nociva" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Cotizar Fauna Nociva
+                    </a>
+                </div>
+
+                <!-- Card 5: Desinfección Patógenos -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Desinfección de Espacios</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Sanitización ambiental para casas, oficinas y locales comerciales contra bacterias, hongos y virus de alta transmisión.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Amonio cuaternario seguro</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Aplicación por nebulización</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Rápida reincorporación</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20requiero%20servicio%20de%20desinfecci%C3%B3n" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Cotizar Desinfección
+                    </a>
+                </div>
+
+                <!-- Card 6: Hotelería & Comercial -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-150 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Comercial & Hotelero</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Planes periódicos de manejo preventivo para hoteles, restaurantes, oficinas y otros establecimientos. Consulta la documentación disponible para tu servicio.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Bitácora de servicio incluida</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Horarios nocturnos/discretos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cops-500"></i> Precios preferenciales por contrato</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5219988541612?text=Hola,%20somos%20un%20negocio/hotel%20y%20necesitamos%20plan%20comercial" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full bg-cops-50 hover:bg-cops-600 hover:text-white text-cops-800 font-semibold py-2.5 px-4 rounded-xl text-center text-sm transition-colors block">
+                        Plan Negocio
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE SOLICITUD DE COTIZACIÓN -->
+    <section id="cotizador" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-cops-900 to-cops-800 rounded-3xl p-6 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <!-- Decorative Circle -->
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cops-600/30 rounded-full blur-2xl"></div>
+
+                <div class="relative z-10 space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-3">
+                        <span class="bg-cops-500/30 text-cops-200 text-xs font-bold px-3 py-1 rounded-full uppercase">Cotizador Directo</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold">Solicita una cotización para tu inmueble</h2>
+                        <p class="text-cops-100 text-sm sm:text-base">
+                            Cuéntanos qué tipo de inmueble tienes, qué plaga identificaste y en qué zona te encuentras. Enviaremos los datos a nuestro equipo por WhatsApp para que pueda orientarte.
+                        </p>
+                    </div>
+
+                    <!-- Calculator Form Controls -->
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15">
+                        
+                        <!-- Step 1: Tipo Inmueble -->
+                        <div class="space-y-2">
+                            <label for="calc-property" class="block text-xs font-bold uppercase tracking-wider text-cops-200">1. Tipo de inmueble</label>
+                            <select id="calc-property" class="w-full bg-cops-900/80 border border-cops-600 text-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-cops-400 focus:outline-none">
+                                <option value="Casa / Departamento">Casa o Departamento</option>
+                                <option value="Local Comercial / Oficina">Local Comercial / Oficina</option>
+                                <option value="Restaurante / Bar">Restaurante / Bar</option>
+                                <option value="Hotel / Hostal">Hotel / Hostal</option>
+                                <option value="Nave Industrial / Bodega">Nave Industrial / Bodega</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 2: Tipo de Plaga -->
+                        <div class="space-y-2">
+                            <label for="calc-pest" class="block text-xs font-bold uppercase tracking-wider text-cops-200">2. Plaga principal</label>
+                            <select id="calc-pest" class="w-full bg-cops-900/80 border border-cops-600 text-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-cops-400 focus:outline-none">
+                                <option value="Cucarachas y Rastreros">Cucarachas / Hormigas</option>
+                                <option value="Chinches de Cama">Chinches de Cama</option>
+                                <option value="Roedores (Ratas / Ratones)">Roedores (Ratas / Ratones)</option>
+                                <option value="Mosquitos y Voladores">Mosquitos y Voladores</option>
+                                <option value="Alacranes y Arañas">Alacranes / Arañas</option>
+                                <option value="Desinfección Preventiva">Desinfección / Sanitización</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 3: Ubicación -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-cops-200" for="calc-zone">3. Ubicación</label>
+                            <select id="calc-zone" class="w-full bg-cops-900/80 border border-cops-600 text-white rounded-xl p-3 text-sm focus:ring-2 focus:ring-cops-400 focus:outline-none">
+                                <option value="Cancún Centro / Z. Hotelera">Cancún Centro / Z. Hotelera</option>
+                                <option value="Cancún Regiones / Periferia">Cancún Regiones / Periferia</option>
+                                <option value="Playa del Carmen">Playa del Carmen</option>
+                                <option value="Isla Mujeres Centro">Isla Mujeres Centro</option>
+                                <option value="Riviera Maya Otras Zonas">Riviera Maya Otras Zonas</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 4: Área aproximada -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-cops-200" for="calc-area">4. Área aproximada (opcional)</label>
+                            <input id="calc-area" type="number" min="1" max="100000" inputmode="numeric" placeholder="Ej. 120 m²" class="w-full bg-cops-900/80 border border-cops-600 text-white placeholder-cops-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-cops-400 focus:outline-none">
+                        </div>
+
+                    </div>
+
+                    <!-- Output & Action -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between bg-cops-900/90 p-6 rounded-2xl border border-cops-700 gap-4">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs text-cops-300 font-medium block">Resumen de solicitud:</span>
+                            <div id="calc-summary" class="font-bold text-white text-base sm:text-lg">
+                                Fumigación para Casa / Departamento en Cancún
+                            </div>
+                            <span class="text-xs text-emerald-300 flex items-center gap-1 justify-center sm:justify-start mt-1">
+                                <i class="fa-solid fa-circle-check"></i> La cotización final depende de la inspección y del tratamiento requerido
+                            </span>
+                        </div>
+
+                        <button id="send-calc-btn" 
+                                class="w-full sm:w-auto bg-cops-500 hover:bg-cops-400 text-white font-extrabold px-8 py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 transition-transform hover:scale-105 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Enviar Solicitud por WhatsApp</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONAS DE COBERTURA -->
+    <section id="cobertura" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-cops-600 font-bold text-sm tracking-widest uppercase bg-cops-100 px-3 py-1 rounded-full">Cobertura Regional</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                    Atendemos distintas zonas de Quintana Roo
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Consulta disponibilidad de servicio en Cancún, Isla Mujeres, Playa del Carmen y otras zonas de la Riviera Maya.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Zone 1: Cancún -->
+                <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm hover:border-cops-500 transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-xl font-bold">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-xl text-gray-900">Cancún (Sede Principal)</h3>
+                            <p class="text-xs text-gray-500">Región 216 Mz 46 Lt 3, C.P. 77538</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Cobertura total en Regiones, Supermanzanas, Zona Hotelera, Bonfil, Huayacán y residenciales norte/sur.
+                    </p>
+                    <div class="bg-cops-50 p-3 rounded-xl text-xs text-cops-800 font-semibold flex items-center justify-between">
+                        <span><i class="fa-regular fa-clock mr-1"></i> Atención:</span>
+                        <span class="text-cops-600 font-bold">Sujeta a disponibilidad</span>
+                    </div>
+                </div>
+
+                <!-- Zone 2: Playa del Carmen -->
+                <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm hover:border-cops-500 transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-xl font-bold">
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-xl text-gray-900">Playa del Carmen</h3>
+                            <p class="text-xs text-gray-500">Municipio de Solidaridad</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Atención a departamentos turísticos, condominios, locales comerciales en Quinta Avenida y zona urbana.
+                    </p>
+                    <div class="bg-cops-50 p-3 rounded-xl text-xs text-cops-800 font-semibold flex items-center justify-between">
+                        <span><i class="fa-regular fa-clock mr-1"></i> Atención:</span>
+                        <span class="text-cops-600 font-bold">Con cita</span>
+                    </div>
+                </div>
+
+                <!-- Zone 3: Isla Mujeres -->
+                <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm hover:border-cops-500 transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-cops-100 rounded-2xl flex items-center justify-center text-cops-700 text-xl font-bold">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-xl text-gray-900">Isla Mujeres Centro</h3>
+                            <p class="text-xs text-gray-500">Zona Insular y Continental</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Atención directa a hoteles, restaurantes de playa, domicilios y comercios de la isla con protocolos limpios.
+                    </p>
+                    <div class="bg-cops-50 p-3 rounded-xl text-xs text-cops-800 font-semibold flex items-center justify-between">
+                        <span><i class="fa-regular fa-clock mr-1"></i> Atención:</span>
+                        <span class="text-cops-600 font-bold">Con cita</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-14">
+                <span class="text-cops-600 font-bold text-sm tracking-widest uppercase bg-cops-100 px-3 py-1 rounded-full">Resuelve tus dudas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Preguntas Frecuentes</h2>
+                <p class="text-gray-600">Información general sobre nuestros servicios de control de plagas.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden transition-all">
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-gray-900 hover:bg-cops-50 transition-colors" aria-controls="faq-answer-1" aria-expanded="false">
+                        <span>¿Qué medidas de seguridad debo tomar con niños y mascotas?</span>
+                        <i class="fa-solid fa-chevron-down text-cops-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div id="faq-answer-1" class="faq-content p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50" hidden>
+                        Las medidas dependen del producto, el área y el tipo de aplicación. Antes del servicio te indicaremos cuánto tiempo debe permanecer desocupado el espacio, cuándo ventilar y qué precauciones tomar con niños, mascotas, alimentos y utensilios. Sigue siempre las indicaciones específicas del técnico y la etiqueta del producto.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden transition-all">
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-gray-900 hover:bg-cops-50 transition-colors" aria-controls="faq-answer-2" aria-expanded="false">
+                        <span>¿Es necesario desocupar la casa o guardar los utensilios?</span>
+                        <i class="fa-solid fa-chevron-down text-cops-600 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-2" class="faq-content p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50" hidden>
+                        Depende del tratamiento que se vaya a realizar. Como preparación general, guarda o cubre alimentos, utensilios y objetos de uso personal. El equipo te indicará si es necesario desalojar alguna zona y durante cuánto tiempo.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden transition-all">
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-gray-900 hover:bg-cops-50 transition-colors" aria-controls="faq-answer-3" aria-expanded="false">
+                        <span>¿Entregan certificado para inspecciones de Salubridad?</span>
+                        <i class="fa-solid fa-chevron-down text-cops-600 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-3" class="faq-content p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50" hidden>
+                        La documentación disponible depende del servicio y de los requisitos aplicables al establecimiento. Al solicitar tu cotización, indica si necesitas una constancia o documentación para una inspección.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden transition-all">
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-gray-900 hover:bg-cops-50 transition-colors" aria-controls="faq-answer-4" aria-expanded="false">
+                        <span>¿Cuánto tiempo dura el efecto protector?</span>
+                        <i class="fa-solid fa-chevron-down text-cops-600 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-4" class="faq-content p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50" hidden>
+                        La duración puede variar según el producto utilizado, la plaga, las condiciones del inmueble, la limpieza y el entorno. Durante la visita podemos recomendarte un plan de seguimiento adecuado.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cops-900 text-white border-t border-cops-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="w-12 h-12 object-contain" width="48" height="48" loading="lazy">
+                        <span class="text-xl font-black tracking-tight">COPS CONTROL</span>
+                    </div>
+                    <p class="text-xs text-cops-200 leading-relaxed">
+                        Empresa mexicana especializada en servicios de control de plagas para hogares y negocios. Trabajamos con procedimientos adecuados al tipo de espacio y tratamiento.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs font-semibold text-cops-300">
+                        <span>#EscogeConSeguridad</span>
+                        <span>#EscogeCOPS</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Enlaces Rápidos -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-cops-300">Navegación</h4>
+                    <ul class="space-y-2 text-sm text-cops-100">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios de Fumigación</a></li>
+                        <li><a href="#cobertura" class="hover:text-white transition-colors">Cancún & Riviera Maya</a></li>
+                        <li><a href="#cotizador" class="hover:text-white transition-colors">Solicitud de cotización</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contacto Directo -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-cops-300">Contacto Directo</h4>
+                    <ul class="space-y-2.5 text-xs text-cops-100">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-cops-400 mt-1"></i>
+                            <span>Región 216 Mz 46 Lt 3, Cancún, Quintana Roo, México, C.P. 77538</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-cops-400"></i>
+                            <a href="tel:+529981523517" class="hover:underline">+52 998 152 3517</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-cops-400"></i>
+                            <a href="https://wa.me/5219988541612" target="_blank" rel="noopener noreferrer" class="hover:underline">+52 1 9988541612</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-cops-400"></i>
+                            <a href="mailto:copscontrol.72@hotmail.com" class="hover:underline">copscontrol.72@hotmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Zonas de Cobertura -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-cops-300">Zonas Atendidas</h4>
+                    <p class="text-xs text-cops-200">
+                        Cancún Centro • Zona Hotelera • Isla Mujeres Centro • Playa del Carmen • Riviera Maya • Puerto Morelos.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://wa.me/5219988541612?text=Hola,%20quisiera%20agendar%20una%20visita" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-cops-600 hover:bg-cops-500 text-white font-bold text-xs py-2.5 px-4 rounded-xl transition-colors">
+                            Agendar Inspección Gratis
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-12 mt-12 border-t border-cops-800 text-center text-xs text-cops-300 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 COPS Control de Plagas. Todos los derechos reservados. Empresa mexicana.</p>
+                <div class="flex gap-4">
+                    <span>Atención en Cancún y Quintana Roo</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CHATBOT FLOTANTE ENLAZADO A WHATSAPP -->
+    <div class="fixed bottom-5 right-5 z-50">
+        
+        <!-- Trigger Floating Button -->
+        <button id="chatbot-launcher" type="button" aria-label="Abrir asistente de contacto" aria-controls="chatbot-modal" aria-expanded="false"
+                class="relative bg-emerald-500 hover:bg-emerald-600 text-white rounded-full p-4 shadow-2xl flex items-center justify-center transition-all transform hover:scale-110 whatsapp-pulse focus:outline-none">
+            <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white animate-bounce">1</span>
+        </button>
+
+        <!-- Chat Window Widget -->
+        <section id="chatbot-modal" role="dialog" aria-modal="false" aria-label="Asistente de contacto COPS" class="hidden absolute bottom-16 right-0 w-[90vw] sm:w-[380px] bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col transition-all duration-300">
+            
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-cops-800 to-cops-600 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <img src="cops.png" alt="" class="w-10 h-10 rounded-full bg-white object-contain p-1 shadow" width="40" height="40" loading="lazy">
+                        <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-cops-800"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm leading-tight">Asistente COPS</h4>
+                        <span class="text-[11px] text-cops-200 flex items-center gap-1">
+                            <i class="fa-solid fa-bolt text-emerald-300"></i> Asistente de opciones y contacto
+                        </span>
+                    </div>
+                </div>
+                <button id="chatbot-close" type="button" aria-label="Cerrar asistente" class="text-cops-200 hover:text-white p-1 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Chat Body Message Stream -->
+            <div id="chat-stream" aria-live="polite" aria-relevant="additions" class="p-4 bg-emerald-50/40 h-80 overflow-y-auto space-y-3 text-xs">
+                
+                <!-- Welcome Bot Message -->
+                <div class="flex items-start gap-2 max-w-[85%]">
+                    <img src="cops.png" alt="" class="w-7 h-7 rounded-full bg-white object-contain p-0.5 shrink-0" width="28" height="28">
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-gray-800 border border-gray-100 space-y-1">
+                        <p class="font-semibold text-cops-800">¡Hola! 👋 Bienvenido a COPS Control de Plagas.</p>
+                        <p>Te orientamos sobre nuestros servicios de control de plagas en Cancún y Quintana Roo. 🌿</p>
+                        <p class="text-[11px] text-gray-500 pt-1">¿En qué podemos ayudarte hoy?</p>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons Container -->
+                <div id="chat-options" class="flex flex-col gap-2 pt-1 pl-9">
+                    <button data-action="cotizar" class="chat-opt-btn text-left bg-white hover:bg-cops-600 hover:text-white border border-cops-300 text-cops-800 font-semibold p-2.5 rounded-xl transition-all shadow-sm">
+                        🐜 1. Cotizar Fumigación
+                    </button>
+                    <button data-action="urgencia" class="chat-opt-btn text-left bg-white hover:bg-cops-600 hover:text-white border border-cops-300 text-cops-800 font-semibold p-2.5 rounded-xl transition-all shadow-sm">
+                        🚨 2. Solicitar atención prioritaria
+                    </button>
+                    <button data-action="inspeccion" class="chat-opt-btn text-left bg-white hover:bg-cops-600 hover:text-white border border-cops-300 text-cops-800 font-semibold p-2.5 rounded-xl transition-all shadow-sm">
+                        🏡 3. Solicitar una visita de evaluación
+                    </button>
+                    <button data-action="directo" class="chat-opt-btn text-left bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold p-2.5 rounded-xl transition-all shadow-sm flex items-center justify-between">
+                        <span>💬 4. Hablar Directo por WhatsApp</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Chat Footer / Direct Link -->
+            <div class="p-3 bg-white border-t border-gray-200">
+                <a id="direct-wa-link" 
+                   href="https://wa.me/5219988541612?text=Hola%20COPS%20Control%20de%20Plagas,%20deseo%20atenci%C3%B3n%20personalizada" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs shadow transition-colors">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Abrir Chat Oficial WhatsApp</span>
+                </a>
+            </div>
+
+        </section>
+    </div>
+
+    <noscript>
+        <div class="fixed bottom-0 inset-x-0 z-[60] bg-yellow-100 text-yellow-950 p-3 text-center text-sm">
+            Para utilizar el menú móvil, el cotizador y el asistente de contacto, activa JavaScript en tu navegador.
+        </div>
+    </noscript>
+
+    <!-- JAVASCRIPT: navegación, FAQ, solicitud de cotización y asistente -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Datos de contacto: el teléfono y WhatsApp son líneas distintas.
+            const WHATSAPP_NUMBER = '5219988541612';
+            const PHONE_NUMBER = '+529981523517';
+            const makeWhatsAppUrl = (message) =>
+                `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+            // Menú móvil.
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const setMobileMenu = (isOpen) => {
+                if (!mobileMenu || !mobileMenuBtn) return;
+                mobileMenu.classList.toggle('hidden', !isOpen);
+                mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+                mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) icon.className = isOpen ? 'fa-solid fa-xmark text-2xl' : 'fa-solid fa-bars text-2xl';
+            };
+
+            mobileMenuBtn?.addEventListener('click', () => {
+                const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                setMobileMenu(!isOpen);
+            });
+            mobileLinks.forEach((link) => link.addEventListener('click', () => setMobileMenu(false)));
+
+            // Acordeón de preguntas frecuentes: permite abrir una sola respuesta a la vez.
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach((button) => {
+                const content = button.nextElementSibling;
+                if (!content) return;
+                button.setAttribute('aria-expanded', 'false');
+                content.hidden = true;
+
+                button.addEventListener('click', () => {
+                    const shouldOpen = button.getAttribute('aria-expanded') !== 'true';
+                    faqToggles.forEach((otherButton) => {
+                        const otherContent = otherButton.nextElementSibling;
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        if (otherContent) otherContent.hidden = true;
+                        const otherIcon = otherButton.querySelector('i');
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    });
+                    button.setAttribute('aria-expanded', String(shouldOpen));
+                    content.hidden = !shouldOpen;
+                    const icon = button.querySelector('i');
+                    if (icon) icon.style.transform = shouldOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+            });
+
+            // Cotizador: recopila información y la envía al WhatsApp; no inventa precios.
+            const calcProp = document.getElementById('calc-property');
+            const calcPest = document.getElementById('calc-pest');
+            const calcZone = document.getElementById('calc-zone');
+            const calcArea = document.getElementById('calc-area');
+            const calcSummary = document.getElementById('calc-summary');
+            const sendCalcBtn = document.getElementById('send-calc-btn');
+
+            const getQuoteData = () => ({
+                property: calcProp?.value || '',
+                pest: calcPest?.value || '',
+                zone: calcZone?.value || '',
+                area: calcArea?.value.trim() || ''
+            });
+
+            const updateCalcSummary = () => {
+                if (!calcSummary) return;
+                const data = getQuoteData();
+                const areaText = data.area ? ` · ${data.area} m² aprox.` : '';
+                calcSummary.textContent = `${data.pest} en ${data.property} (${data.zone})${areaText}`;
+            };
+
+            [calcProp, calcPest, calcZone, calcArea].forEach((field) => {
+                field?.addEventListener('input', updateCalcSummary);
+                field?.addEventListener('change', updateCalcSummary);
+            });
+            updateCalcSummary();
+
+            sendCalcBtn?.addEventListener('click', () => {
+                const data = getQuoteData();
+                if (!data.property || !data.pest || !data.zone) {
+                    window.alert('Por favor, selecciona el tipo de inmueble, la plaga y la ubicación.');
+                    return;
+                }
+                const message = [
+                    'Hola COPS Control de Plagas. Me gustaría solicitar una cotización:',
+                    `• Inmueble: ${data.property}`,
+                    `• Plaga: ${data.pest}`,
+                    `• Ubicación: ${data.zone}`,
+                    data.area ? `• Área aproximada: ${data.area} m²` : '',
+                    '',
+                    '¿Podrían orientarme sobre el servicio, disponibilidad y costo?'
+                ].filter(Boolean).join('\n');
+                window.open(makeWhatsAppUrl(message), '_blank', 'noopener,noreferrer');
+            });
+
+            // Asistente de contacto: menú de accesos rápidos, no simula una conversación humana.
+            const chatLauncher = document.getElementById('chatbot-launcher');
+            const chatModal = document.getElementById('chatbot-modal');
+            const chatClose = document.getElementById('chatbot-close');
+            const chatStream = document.getElementById('chat-stream');
+            const chatOptions = document.getElementById('chat-options');
+
+            const setChatOpen = (isOpen) => {
+                if (!chatModal || !chatLauncher) return;
+                chatModal.classList.toggle('hidden', !isOpen);
+                chatLauncher.setAttribute('aria-expanded', String(isOpen));
+                chatLauncher.setAttribute('aria-label', isOpen ? 'Cerrar asistente de contacto' : 'Abrir asistente de contacto');
+                if (isOpen) chatClose?.focus();
+                else chatLauncher.focus();
+            };
+
+            chatLauncher?.addEventListener('click', () => {
+                const isOpen = chatLauncher.getAttribute('aria-expanded') === 'true';
+                setChatOpen(!isOpen);
+            });
+            chatClose?.addEventListener('click', () => setChatOpen(false));
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && chatModal && !chatModal.classList.contains('hidden')) {
+                    setChatOpen(false);
+                }
+            });
+
+            const appendChatMessage = (text, { isUser = false, linkText = '', linkMessage = '', linkHref = '' } = {}) => {
+                if (!chatStream) return;
+                const row = document.createElement('div');
+                row.className = isUser
+                    ? 'flex items-end justify-end gap-2 max-w-[85%] ml-auto'
+                    : 'flex items-start gap-2 max-w-[90%]';
+
+                if (!isUser) {
+                    const avatar = document.createElement('img');
+                    avatar.src = 'cops.png';
+                    avatar.alt = '';
+                    avatar.width = 28;
+                    avatar.height = 28;
+                    avatar.className = 'w-7 h-7 rounded-full bg-white object-contain p-0.5 shrink-0';
+                    row.appendChild(avatar);
+                }
+
+                const bubble = document.createElement('div');
+                bubble.className = isUser
+                    ? 'bg-cops-700 text-white p-3 rounded-2xl rounded-tr-none shadow-sm'
+                    : 'bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-gray-800 border border-gray-100 space-y-2';
+                const paragraph = document.createElement('p');
+                paragraph.textContent = text;
+                bubble.appendChild(paragraph);
+
+                if (linkText) {
+                    const link = document.createElement('a');
+                    link.textContent = linkText;
+                    if (linkHref) {
+                        link.href = linkHref;
+                    } else {
+                        link.href = makeWhatsAppUrl(linkMessage);
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                    }
+                    link.className = 'inline-flex items-center gap-2 mt-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-2 rounded-xl text-xs shadow';
+                    bubble.appendChild(link);
+                }
+
+                row.appendChild(bubble);
+                chatStream.appendChild(row);
+                chatStream.scrollTop = chatStream.scrollHeight;
+            };
+
+            chatStream?.addEventListener('click', (event) => {
+                const quoteLink = event.target.closest('a[href="#cotizador"]');
+                if (quoteLink) setChatOpen(false);
+            });
+
+            chatOptions?.addEventListener('click', (event) => {
+                const button = event.target.closest('.chat-opt-btn');
+                if (!button) return;
+                const action = button.dataset.action;
+                appendChatMessage(button.textContent.trim(), { isUser: true });
+
+                if (action === 'cotizar') {
+                    appendChatMessage('Para preparar tu solicitud, completa los datos del cotizador. También puedes escribirnos directamente.', {
+                        linkText: 'Ir al cotizador',
+                        linkHref: '#cotizador'
+                    });
+                } else if (action === 'urgencia') {
+                    appendChatMessage('Envía los detalles de tu solicitud por WhatsApp. La atención depende de la cobertura y disponibilidad del equipo.', {
+                        linkText: 'Enviar solicitud prioritaria',
+                        linkMessage: 'Hola COPS. Necesito atención prioritaria para un servicio de control de plagas. ¿Me pueden confirmar disponibilidad?'
+                    });
+                } else if (action === 'inspeccion') {
+                    appendChatMessage('Comparte tu ubicación y el tipo de inmueble para consultar la disponibilidad de una visita.', {
+                        linkText: 'Solicitar visita',
+                        linkMessage: 'Hola COPS. Me gustaría solicitar información para agendar una visita de evaluación. ¿Qué disponibilidad tienen?'
+                    });
+                } else {
+                    window.open(makeWhatsAppUrl('Hola COPS Control de Plagas. Deseo recibir información sobre sus servicios.'), '_blank', 'noopener,noreferrer');
+                }
+            });
+
+            // Mantener disponible la constante de teléfono para facilitar cambios futuros.
+            document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+                link.href = `tel:${PHONE_NUMBER}`;
+            });
+        });
+    </script>
+</body>
+</html>
