@@ -108,6 +108,35 @@
             background: #2e7d32;
             border-radius: 4px;
         }
+
+        /* Galería de evidencias: mantiene un espacio limpio mientras se agrega cada archivo. */
+        .evidence-media {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #f3f6f3;
+        }
+        .evidence-media > img,
+        .evidence-media > video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .evidence-media .evidence-empty {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            padding: 1rem;
+            text-align: center;
+            color: #4b6350;
+            background: linear-gradient(145deg, #f5faf5, #e8f2e9);
+        }
+        .evidence-media .evidence-empty[hidden] { display: none; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-cops-500 selection:text-white">
@@ -152,6 +181,7 @@
                     <a href="#inicio" class="hover:text-cops-600 transition-colors py-1">Inicio</a>
                     <a href="#nosotros" class="hover:text-cops-600 transition-colors py-1">Nosotros</a>
                     <a href="#servicios" class="hover:text-cops-600 transition-colors py-1">Servicios</a>
+                    <a href="#evidencias" class="hover:text-cops-600 transition-colors py-1">Trabajos realizados</a>
                     <a href="#cobertura" class="hover:text-cops-600 transition-colors py-1">Cobertura</a>
                     <a href="#cotizador" class="hover:text-cops-600 transition-colors py-1">Solicitar cotización</a>
                     <a href="#faq" class="hover:text-cops-600 transition-colors py-1">Preguntas Frecuentes</a>
@@ -179,6 +209,7 @@
             <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Inicio</a>
             <a href="#nosotros" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Nosotros</a>
             <a href="#servicios" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Servicios</a>
+            <a href="#evidencias" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Trabajos realizados</a>
             <a href="#cobertura" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Cobertura</a>
             <a href="#cotizador" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Solicitar cotización</a>
             <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Preguntas Frecuentes</a>
@@ -549,6 +580,238 @@
         </div>
     </section>
 
+    <!-- GALERÍA DE EVIDENCIAS / TRABAJOS REALIZADOS -->
+    <section id="evidencias" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-cops-600 font-bold text-sm tracking-widest uppercase bg-cops-100 px-3 py-1 rounded-full">Galería de trabajos</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Evidencias de nuestros servicios</h2>
+                <p class="text-gray-600 text-lg">Conoce algunos registros fotográficos y videos de los trabajos realizados por COPS Control de Plagas.</p>
+            </div>
+
+            <!--
+                INSTRUCCIONES PARA AGREGAR LAS EVIDENCIAS:
+                1. Crea una carpeta llamada "evidencias" junto a este archivo HTML.
+                2. Guarda tus fotos como evidencia1.jpeg, evidencia2.jpeg, ... evidencia15.jpeg.
+                3. Para un video, guárdalo como .mp4 y cambia únicamente el valor de data-file,
+                   por ejemplo: data-file="evidencias/evidencia3.mp4".
+                4. El sitio detecta automáticamente si el archivo es una imagen o un video.
+                5. Conserva los nombres y la numeración para que cada archivo aparezca en su espacio.
+            -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia1.jpeg" data-alt="Evidencia 01 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 01</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia1.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 01</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia2.jpeg" data-alt="Evidencia 02 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 02</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia2.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 02</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia3.jpeg" data-alt="Evidencia 03 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 03</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia3.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 03</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia4.jpeg" data-alt="Evidencia 04 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 04</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia4.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 04</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia5.jpeg" data-alt="Evidencia 05 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 05</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia5.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 05</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia6.jpeg" data-alt="Evidencia 06 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 06</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia6.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 06</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia7.jpeg" data-alt="Evidencia 07 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 07</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia7.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 07</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia8.jpeg" data-alt="Evidencia 08 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 08</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia8.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 08</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia9.jpeg" data-alt="Evidencia 09 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 09</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia9.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 09</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia10.jpeg" data-alt="Evidencia 10 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 10</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia10.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 10</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia11.jpeg" data-alt="Evidencia 11 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 11</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia11.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 11</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia12.jpeg" data-alt="Evidencia 12 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 12</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia12.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 12</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia13.jpeg" data-alt="Evidencia 13 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 13</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia13.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 13</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia14.jpeg" data-alt="Evidencia 14 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 14</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia14.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 14</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
+                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia15.jpeg" data-alt="Evidencia 15 de trabajos realizados por COPS">
+                        <div class="evidence-empty">
+                            <i class="fa-regular fa-image text-3xl text-cops-500" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Espacio para evidencia 15</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia15.jpeg</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-cops-900">Evidencia 15</p>
+                        <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- FORMULARIO DE SOLICITUD DE COTIZACIÓN -->
     <section id="cotizador" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -800,6 +1063,7 @@
                         <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
                         <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
                         <li><a href="#servicios" class="hover:text-white transition-colors">Servicios de Fumigación</a></li>
+                        <li><a href="#evidencias" class="hover:text-white transition-colors">Trabajos realizados</a></li>
                         <li><a href="#cobertura" class="hover:text-white transition-colors">Cancún & Riviera Maya</a></li>
                         <li><a href="#cotizador" class="hover:text-white transition-colors">Solicitud de cotización</a></li>
                     </ul>
@@ -1136,6 +1400,55 @@
                     });
                 } else {
                     window.open(makeWhatsAppUrl('Hola COPS Control de Plagas. Deseo recibir información sobre sus servicios.'), '_blank', 'noopener,noreferrer');
+                }
+            });
+
+            // Galería de evidencias: carga imágenes o videos según la extensión del archivo.
+            // Los archivos se guardan en la carpeta local "evidencias".
+            document.querySelectorAll('[data-evidence-media]').forEach((container) => {
+                const file = container.dataset.file || '';
+                const placeholder = container.querySelector('.evidence-empty');
+                const altText = container.dataset.alt || 'Evidencia de trabajo realizado';
+                const isVideo = /\.(mp4|webm|ogg)$/i.test(file);
+
+                if (!file || !placeholder) return;
+
+                if (isVideo) {
+                    const video = document.createElement('video');
+                    video.controls = true;
+                    video.preload = 'metadata';
+                    video.playsInline = true;
+                    video.setAttribute('aria-label', altText);
+
+                    const source = document.createElement('source');
+                    source.src = file;
+                    source.type = file.toLowerCase().endsWith('.webm')
+                        ? 'video/webm'
+                        : file.toLowerCase().endsWith('.ogg')
+                            ? 'video/ogg'
+                            : 'video/mp4';
+                    video.appendChild(source);
+
+                    video.addEventListener('loadedmetadata', () => {
+                        placeholder.hidden = true;
+                    }, { once: true });
+                    video.addEventListener('error', () => {
+                        video.remove();
+                    }, { once: true });
+                    container.appendChild(video);
+                } else {
+                    const image = document.createElement('img');
+                    image.src = file;
+                    image.alt = altText;
+                    image.loading = 'lazy';
+                    image.decoding = 'async';
+                    image.addEventListener('load', () => {
+                        placeholder.hidden = true;
+                    }, { once: true });
+                    image.addEventListener('error', () => {
+                        image.remove();
+                    }, { once: true });
+                    container.appendChild(image);
                 }
             });
 
