@@ -137,6 +137,64 @@
             background: linear-gradient(145deg, #f5faf5, #e8f2e9);
         }
         .evidence-media .evidence-empty[hidden] { display: none; }
+
+        /* Reproductores de video: presentación destacada y profesional. */
+        .video-evidence-card {
+            position: relative;
+            isolation: isolate;
+            background: linear-gradient(145deg, #0f3816, #1b5e20 58%, #123d1c);
+            border: 1px solid rgba(46, 125, 50, .22);
+            box-shadow: 0 12px 30px rgba(15, 56, 22, .12);
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+        .video-evidence-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(103, 167, 106, .75);
+            box-shadow: 0 20px 42px rgba(15, 56, 22, .2);
+        }
+        .video-evidence-card .video-media {
+            aspect-ratio: 16 / 9;
+            position: relative;
+            overflow: hidden;
+            background: #071f0d;
+        }
+        .video-evidence-card .video-media video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #071f0d;
+        }
+        .video-evidence-card .video-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            color: #cde8d0;
+            font-size: .68rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+        .video-evidence-card .video-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: .85rem;
+            color: white;
+            background: rgba(255,255,255,.1);
+            font-weight: 800;
+        }
+        .video-evidence-card .video-footer {
+            color: rgba(255,255,255,.72);
+            font-size: .75rem;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .video-evidence-card { transition: none; }
+            .video-evidence-card:hover { transform: none; }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-cops-500 selection:text-white">
@@ -593,10 +651,11 @@
                 INSTRUCCIONES PARA AGREGAR LAS S:
                 1. Crea una carpeta llamada "evidencias" junto a este archivo HTML.
                 2. Guarda tus fotos como evidencia1.jpeg, evidencia2.jpeg, ... evidencia15.jpeg.
-                3. Para un video, guárdalo como .mp4 y cambia únicamente el valor de data-file,
-                   por ejemplo: data-file="evidencias/evidencia3.mp4".
+                3. Para los dos videos, guárdalos dentro de "evidencias" con estos nombres:
+                   evidencia-video-1.mp4 y evidencia-video-2.mp4.
                 4. El sitio detecta automáticamente si el archivo es una imagen o un video.
                 5. Conserva los nombres y la numeración para que cada archivo aparezca en su espacio.
+                Nota: usa formato MP4 (no MP3, que es únicamente audio).
             -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-cops-300 transition-all">
@@ -722,6 +781,44 @@
                     <div class="p-4">
                         <p class="font-bold text-cops-900"></p>
                         <p class="text-xs text-gray-500 mt-1">Trabajo realizado · COPS Control de Plagas</p>
+                    </div>
+                </article>
+
+                <!-- VIDEO 01: coloca evidencia-video-1.mp4 dentro de la carpeta evidencias -->
+                <article class="video-evidence-card rounded-2xl overflow-hidden">
+                    <div class="video-media" data-evidence-media data-file="evidencias/evidencia-video-1.mp4" data-alt="Video 1 de trabajos realizados por COPS Control de Plagas">
+                        <div class="evidence-empty">
+                            <i class="fa-solid fa-circle-play text-4xl text-cops-600" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Video de trabajos realizados 01</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia-video-1.mp4</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between gap-3 mb-3">
+                            <span class="video-kicker"><i class="fa-solid fa-film"></i> Registro audiovisual</span>
+                            <span class="video-number">01</span>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-white">Video de trabajo realizado</h3>
+                        <p class="video-footer mt-2">COPS Control de Plagas · Evidencia en video</p>
+                    </div>
+                </article>
+
+                <!-- VIDEO 02: coloca evidencia-video-2.mp4 dentro de la carpeta evidencias -->
+                <article class="video-evidence-card rounded-2xl overflow-hidden">
+                    <div class="video-media" data-evidence-media data-file="evidencias/evidencia-video-2.mp4" data-alt="Video 2 de trabajos realizados por COPS Control de Plagas">
+                        <div class="evidence-empty">
+                            <i class="fa-solid fa-circle-play text-4xl text-cops-600" aria-hidden="true"></i>
+                            <span class="font-bold text-sm">Video de trabajos realizados 02</span>
+                            <span class="text-xs text-gray-500">evidencias/evidencia-video-2.mp4</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="flex items-center justify-between gap-3 mb-3">
+                            <span class="video-kicker"><i class="fa-solid fa-film"></i> Registro audiovisual</span>
+                            <span class="video-number">02</span>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-white">Video de trabajo realizado</h3>
+                        <p class="video-footer mt-2">COPS Control de Plagas · Evidencia en video</p>
                     </div>
                 </article>
 
