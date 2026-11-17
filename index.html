@@ -6,13 +6,14 @@
     <title>COPS Control de Plagas | Control profesional en Cancún y Quintana Roo</title>
     <meta name="description" content="Servicios de control de plagas para hogares, comercios, restaurantes y hoteles en Cancún, Playa del Carmen e Isla Mujeres. Solicita una cotización con COPS.">
     <meta name="theme-color" content="#0f3816">
+    <meta name="color-scheme" content="light">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:title" content="COPS Control de Plagas">
     <meta property="og:description" content="Control profesional de plagas en Cancún y Quintana Roo. Cotiza tu servicio por WhatsApp.">
-    <meta property="og:image" content="cops.png">
-    <link rel="icon" type="image/png" href="cops.png">
-    <link rel="preload" as="image" href="cops.png">
+    <meta property="og:image" content="policias.png">
+    <link rel="icon" type="image/png" href="policias.png">
+    <link rel="preload" as="image" href="policias.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -299,6 +300,32 @@
             .evidence-card:hover, .evidence-video-card:hover { transform: none; }
             .evidence-card:hover .evidence-media > img { transform: none; }
         }
+
+        /* Identidad visual y navegación: encabezado compacto y legible. */
+        .brand-lockup { display: inline-flex; align-items: center; gap: .8rem; min-width: max-content; }
+        .brand-copy { display: flex; flex-direction: column; gap: .28rem; line-height: 1.05; }
+        .brand-name { color: #0f3816; font-size: clamp(.95rem, 1.15vw, 1.2rem); font-weight: 900; letter-spacing: -.045em; white-space: nowrap; }
+        .brand-name span { color: #2e7d32; }
+        .brand-tagline { color: #6b7280; font-size: .68rem; font-weight: 600; letter-spacing: .035em; }
+        header { box-shadow: 0 8px 24px rgba(15,56,22,.055); }
+        header nav a { white-space: nowrap; }
+        .evidence-section { position: relative; }
+        .evidence-section::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: linear-gradient(90deg, transparent, rgba(46,125,50,.18), transparent); }
+        .evidence-card, .evidence-video-card { height: 100%; }
+        .evidence-info, .evidence-video-info { min-height: 148px; }
+        .evidence-media > img { object-position: center; }
+        .evidence-media.media-missing .evidence-empty::after { content: "No se pudo cargar el archivo. Verifica el nombre y la ubicación."; display: block; max-width: 22rem; margin-top: .2rem; color: #8b5e34; font-size: .68rem; font-weight: 600; }
+        .evidence-media.media-loaded .evidence-empty { display: none; }
+        @media (max-width: 1279px) {
+            .brand-name { font-size: 1.05rem; }
+        }
+        @media (max-width: 640px) {
+            .brand-logo { width: 2.9rem; height: 2.9rem; }
+            .brand-name { font-size: .93rem; }
+            .brand-tagline { font-size: .61rem; }
+            .evidence-info, .evidence-video-info { min-height: 0; }
+        }
+
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-cops-500 selection:text-white">
@@ -328,18 +355,16 @@
             <div class="flex justify-between items-center h-20">
                 
                 <!-- Logotipo oficial COPS -->
-                <a href="#inicio" class="flex items-center gap-3 group" aria-label="COPS Control de Plagas, ir al inicio">
-                    <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo group-hover:scale-105 transition-transform" width="56" height="56" fetchpriority="high">
-                    <div>
-                        <span class="text-xl md:text-2xl font-extrabold tracking-tight text-cops-900 block leading-tight">
-                            COPS <span class="text-cops-600">CONTROL DE PLAGAS</span>
-                        </span>
-                        <span class="text-xs text-gray-500 font-medium tracking-wide block">Empresa mexicana</span>
-                    </div>
+                <a href="#inicio" class="brand-lockup group" aria-label="COPS Control de Plagas, ir al inicio">
+                    <img src="policias.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo group-hover:scale-105 transition-transform" width="52" height="52" fetchpriority="high">
+                    <span class="brand-copy">
+                        <span class="brand-name">COPS <span>CONTROL DE PLAGAS</span></span>
+                        <span class="brand-tagline">Control profesional · Quintana Roo</span>
+                    </span>
                 </a>
 
                 <!-- Desktop Nav Links -->
-                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                <nav class="hidden xl:flex items-center gap-5 2xl:gap-6 text-[13px] font-semibold text-gray-700">
                     <a href="#inicio" class="hover:text-cops-600 transition-colors py-1">Inicio</a>
                     <a href="#nosotros" class="hover:text-cops-600 transition-colors py-1">Nosotros</a>
                     <a href="#servicios" class="hover:text-cops-600 transition-colors py-1">Servicios</a>
@@ -350,7 +375,7 @@
                 </nav>
 
                 <!-- Action Button -->
-                <div class="hidden lg:flex items-center gap-3">
+                <div class="hidden xl:flex items-center gap-3">
                     <a href="https://wa.me/5219988541612?text=Hola%20COPS%20Control%20de%20Plagas,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n" 
                        target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center justify-center gap-2 bg-cops-600 hover:bg-cops-700 text-white font-bold px-5 py-2.5 rounded-full shadow-lg shadow-cops-600/30 transition-all transform hover:-translate-y-0.5">
@@ -360,14 +385,14 @@
                 </div>
 
                 <!-- Mobile Menu Toggle Button -->
-                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-cops-700 hover:bg-cops-50 focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-btn" type="button" class="xl:hidden p-2 rounded-lg text-gray-600 hover:text-cops-700 hover:bg-cops-50 focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
                     <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+        <nav id="mobile-menu" aria-label="Navegación móvil" class="hidden xl:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
             <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Inicio</a>
             <a href="#nosotros" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Nosotros</a>
             <a href="#servicios" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cops-50 hover:text-cops-600">Servicios</a>
@@ -455,7 +480,7 @@
 
                         <!-- Brand Crest -->
                         <div class="text-center py-4 bg-gradient-to-b from-cops-800/80 to-cops-900/80 rounded-2xl border border-cops-700/50 p-6">
-                            <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo-large mb-3" width="192" height="128" loading="eager">
+                            <img src="policias.png" alt="Logotipo oficial de COPS Control de Plagas" class="brand-logo-large mb-3" width="192" height="128" loading="eager">
                             <h3 class="text-xl font-bold text-white">COPS Control de Plagas</h3>
                             <p class="text-xs text-cops-200 mt-1">#EscogeConSeguridad #EscogeCOPSCONTROLDEPLAGAS</p>
                         </div>
@@ -743,7 +768,7 @@
     </section>
 
     <!-- GALERÍA DE EVIDENCIAS / TRABAJOS REALIZADOS -->
-    <section id="evidencias" class="py-20 bg-gradient-to-b from-gray-50 to-white border-y border-gray-200">
+    <section id="evidencias" class="evidence-section py-20 bg-gradient-to-b from-gray-50 to-white border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-12">
                 <span class="inline-flex items-center gap-2 text-cops-700 font-extrabold text-xs tracking-[.18em] uppercase bg-cops-100 px-4 py-2 rounded-full">
@@ -753,257 +778,165 @@
                     Trabajos realizados por COPS
                 </h2>
                 <p class="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
-                    Conoce algunos de los servicios y procedimientos de control de plagas realizados por nuestro equipo en campo.
+                    Una muestra de los servicios y procedimientos realizados por nuestro equipo. Cada registro refleja nuestro trabajo en campo y los métodos de control aplicados.
                 </p>
                 <div class="mt-6 flex flex-wrap justify-center gap-3 text-xs font-bold text-cops-800">
                     <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-cops-100 shadow-sm">
-                        <i class="fa-regular fa-images text-cops-600"></i> 9 registros fotográficos
+                        <i class="fa-regular fa-images text-cops-600" aria-hidden="true"></i> 14 fotografías
                     </span>
                     <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-cops-100 shadow-sm">
-                        <i class="fa-solid fa-film text-cops-600"></i> 2 videos de trabajos
+                        <i class="fa-solid fa-film text-cops-600" aria-hidden="true"></i> 2 videos
                     </span>
                 </div>
             </div>
 
             <!--
-                ARCHIVOS DE LA GALERÍA:
-                Guarda las fotografías dentro de la carpeta "evidencias" con estos nombres:
-                evidencia1.jpeg, evidencia2.jpeg, ... evidencia9.jpeg.
-                Guarda los videos como:
-                evidencia-video-1.mp4 y evidencia-video-2.mp4.
-                La evidencia anterior número 4 y la antigua nota fueron retiradas.
-                La antigua imagen 6 corresponde al control de termitas.
-                La antigua imagen 11 corresponde a termonebulización para insectos voladores.
-                La antigua imagen 14 corresponde a aspersión para insectos rastreros.
+                ARCHIVOS DE EVIDENCIA (todos en la misma carpeta que este index.html):
+                Se muestran los archivos 1–3 y 5–15. evidencia 4.jpeg se omite por indicación.
+                Los espacios se escriben como %20 en las rutas para que funcionen correctamente en GitHub Pages.
+                Imágenes especiales:
+                - evidencia 6.jpeg: control de termitas.
+                - evidencia 9.jpeg: aspersión para insectos rastreros.
+                - evidencia 11.png: termonebulización para insectos voladores.
+                Videos: evidencia-video-1.mp4 y evidencia-video-2.mp4.
             -->
             <div class="evidence-grid">
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia1.png" data-alt="Aplicación de nebulización | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%201.png" data-alt="Aplicación de nebulización | COPS Control de Plagas">
                         <span class="evidence-index">01</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 01</span>
-                            <span class="evidence-file">evidencia1.png</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Aplicación de nebulización</span><span class="evidence-file">evidencia 1.png</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>NEBULIZACIÓN</span>
-                            <span class="evidence-reference">REGISTRO 01</span>
-                        </div>
-                        <h3 class="evidence-title">Aplicación de nebulización</h3>
-                        <p class="evidence-description">Registro fotográfico de un servicio de nebulización realizado por COPS.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> NEBULIZACIÓN</span><span class="evidence-reference">REGISTRO 01</span></div><h3 class="evidence-title">Aplicación de nebulización</h3><p class="evidence-description">Registro fotográfico de un procedimiento de aplicación realizado por el equipo COPS.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 2.jpeg" data-alt="Servicio de nebulización | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%202.jpeg" data-alt="Servicio de nebulización | COPS Control de Plagas">
                         <span class="evidence-index">02</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 02</span>
-                            <span class="evidence-file">evidencia 2.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio de nebulización</span><span class="evidence-file">evidencia 2.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>NEBULIZACIÓN</span>
-                            <span class="evidence-reference">REGISTRO 02</span>
-                        </div>
-                        <h3 class="evidence-title">Servicio de nebulización</h3>
-                        <p class="evidence-description">Procedimiento de aplicación para el control de insectos.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> NEBULIZACIÓN</span><span class="evidence-reference">REGISTRO 02</span></div><h3 class="evidence-title">Servicio de nebulización</h3><p class="evidence-description">Evidencia de un servicio de control de insectos realizado en campo.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 3.jpeg" data-alt="Control de termitas | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%203.jpeg" data-alt="Servicio de control de plagas | COPS Control de Plagas">
                         <span class="evidence-index">03</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 03</span>
-                            <span class="evidence-file">evidencia 3.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio de control de plagas</span><span class="evidence-file">evidencia 3.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>TRATAMIENTO DE TERMITAS</span>
-                            <span class="evidence-reference">REGISTRO 03</span>
-                        </div>
-                        <h3 class="evidence-title">Control de termitas</h3>
-                        <p class="evidence-description">Atención especializada para el control de termitas.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> CONTROL DE PLAGAS</span><span class="evidence-reference">REGISTRO 03</span></div><h3 class="evidence-title">Servicio de control de plagas</h3><p class="evidence-description">Registro fotográfico de atención y trabajo realizado por COPS.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 4.jpeg" data-alt="Servicio de control de plagas | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%205.jpeg" data-alt="Servicio realizado por COPS | Evidencia fotográfica 5">
                         <span class="evidence-index">04</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 04</span>
-                            <span class="evidence-file">evidencia 4.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Evidencia fotográfica</span><span class="evidence-file">evidencia 5.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>CONTROL DE PLAGAS</span>
-                            <span class="evidence-reference">REGISTRO 04</span>
-                        </div>
-                        <h3 class="evidence-title">Servicio de control de plagas</h3>
-                        <p class="evidence-description">Registro de un servicio realizado por el equipo COPS.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SERVICIO EN CAMPO</span><span class="evidence-reference">REGISTRO 04</span></div><h3 class="evidence-title">Servicio realizado por COPS</h3><p class="evidence-description">Registro fotográfico de un trabajo realizado por nuestro equipo.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 5.jpeg" data-alt="Sanitización de espacios | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%206.jpeg" data-alt="Tratamiento para el control de termitas | COPS Control de Plagas">
                         <span class="evidence-index">05</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 05</span>
-                            <span class="evidence-file">evidencia 5.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Control de termitas</span><span class="evidence-file">evidencia 6.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>SANITIZACIÓN</span>
-                            <span class="evidence-reference">REGISTRO 05</span>
-                        </div>
-                        <h3 class="evidence-title">Sanitización de espacios</h3>
-                        <p class="evidence-description">Evidencia de trabajos de sanitización en espacios.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> CONTROL DE TERMITAS</span><span class="evidence-reference">REGISTRO 05</span></div><h3 class="evidence-title">Tratamiento para el control de termitas</h3><p class="evidence-description">Servicio especializado para el control y manejo de termitas.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 6.jpeg" data-alt="Termonebulización para insectos voladores | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%207.png" data-alt="Servicio de control de plagas | COPS Control de Plagas">
                         <span class="evidence-index">06</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 06</span>
-                            <span class="evidence-file">evidencia 6.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio de control de plagas</span><span class="evidence-file">evidencia 7.png</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>TERMONEBULIZACIÓN</span>
-                            <span class="evidence-reference">REGISTRO 06</span>
-                        </div>
-                        <h3 class="evidence-title">Termonebulización para insectos voladores</h3>
-                        <p class="evidence-description">Aplicación orientada al control de mosquitos, moscas y otros insectos voladores.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> CONTROL DE PLAGAS</span><span class="evidence-reference">REGISTRO 06</span></div><h3 class="evidence-title">Servicio de control de plagas</h3><p class="evidence-description">Registro del trabajo realizado por el personal técnico de COPS.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 7.png" data-alt="Servicio de sanitización | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%208.png" data-alt="Servicio de sanitización | COPS Control de Plagas">
                         <span class="evidence-index">07</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 07</span>
-                            <span class="evidence-file">evidencia 7.png</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio de sanitización</span><span class="evidence-file">evidencia 8.png</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>SANITIZACIÓN</span>
-                            <span class="evidence-reference">REGISTRO 07</span>
-                        </div>
-                        <h3 class="evidence-title">Servicio de sanitización</h3>
-                        <p class="evidence-description">Registro de un servicio de sanitización realizado por COPS.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SANITIZACIÓN</span><span class="evidence-reference">REGISTRO 07</span></div><h3 class="evidence-title">Servicio de sanitización</h3><p class="evidence-description">Evidencia fotográfica de un procedimiento de sanitización.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 8.png" data-alt="Servicio de control de insectos | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%209.jpeg" data-alt="Aspersión para el control de insectos rastreros | COPS Control de Plagas">
                         <span class="evidence-index">08</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 08</span>
-                            <span class="evidence-file">evidencia 8.png</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Aspersión para insectos rastreros</span><span class="evidence-file">evidencia 9.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>CONTROL DE INSECTOS</span>
-                            <span class="evidence-reference">REGISTRO 08</span>
-                        </div>
-                        <h3 class="evidence-title">Servicio de control de insectos</h3>
-                        <p class="evidence-description">Evidencia fotográfica de los procedimientos de control de plagas.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> ASPERSIÓN</span><span class="evidence-reference">REGISTRO 08</span></div><h3 class="evidence-title">Aspersión para el control de insectos rastreros</h3><p class="evidence-description">Tratamiento dirigido a cucarachas, hormigas, arañas, alacranes y otras plagas rastreras.</p></div>
                 </article>
 
                 <article class="evidence-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia 9.jpeg" data-alt="Aspersión para el control de insectos rastreros | COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2010.jpeg" data-alt="Registro de servicio en campo | COPS Control de Plagas">
                         <span class="evidence-index">09</span>
-                        <div class="evidence-empty">
-                            <i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Espacio para fotografía 09</span>
-                            <span class="evidence-file">evidencia 9.jpeg</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Registro de servicio en campo</span><span class="evidence-file">evidencia 10.jpeg</span></div>
                     </div>
-                    <div class="evidence-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>ASPERSIÓN</span>
-                            <span class="evidence-reference">REGISTRO 09</span>
-                        </div>
-                        <h3 class="evidence-title">Aspersión para el control de insectos rastreros</h3>
-                        <p class="evidence-description">Tratamiento dirigido a cucarachas, hormigas, arañas, alacranes y otras plagas rastreras.</p>
-                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SERVICIO EN CAMPO</span><span class="evidence-reference">REGISTRO 09</span></div><h3 class="evidence-title">Registro de servicio en campo</h3><p class="evidence-description">Evidencia del trabajo realizado por el equipo de COPS.</p></div>
                 </article>
 
-                <!-- VIDEO 01 -->
+                <article class="evidence-card">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2011.png" data-alt="Termonebulización para insectos voladores | COPS Control de Plagas">
+                        <span class="evidence-index">10</span>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Termonebulización para insectos voladores</span><span class="evidence-file">evidencia 11.png</span></div>
+                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> TERMONEBULIZACIÓN</span><span class="evidence-reference">REGISTRO 10</span></div><h3 class="evidence-title">Termonebulización para insectos voladores</h3><p class="evidence-description">Procedimiento para el control de mosquitos, moscas y otros insectos voladores.</p></div>
+                </article>
+
+                <article class="evidence-card">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2012.png" data-alt="Servicio de control de plagas | COPS Control de Plagas">
+                        <span class="evidence-index">11</span>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio de control de plagas</span><span class="evidence-file">evidencia 12.png</span></div>
+                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> CONTROL DE PLAGAS</span><span class="evidence-reference">REGISTRO 11</span></div><h3 class="evidence-title">Servicio de control de plagas</h3><p class="evidence-description">Registro fotográfico de un servicio realizado por COPS.</p></div>
+                </article>
+
+                <article class="evidence-card">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2013.png" data-alt="Trabajo de control de plagas | COPS Control de Plagas">
+                        <span class="evidence-index">12</span>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Trabajo de control de plagas</span><span class="evidence-file">evidencia 13.png</span></div>
+                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> CONTROL DE PLAGAS</span><span class="evidence-reference">REGISTRO 12</span></div><h3 class="evidence-title">Trabajo de control de plagas</h3><p class="evidence-description">Evidencia fotográfica de las actividades de servicio en campo.</p></div>
+                </article>
+
+                <article class="evidence-card">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2014.png" data-alt="Servicio profesional de control de plagas | COPS Control de Plagas">
+                        <span class="evidence-index">13</span>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Servicio profesional de control de plagas</span><span class="evidence-file">evidencia 14.png</span></div>
+                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SERVICIO EN CAMPO</span><span class="evidence-reference">REGISTRO 13</span></div><h3 class="evidence-title">Servicio profesional de control de plagas</h3><p class="evidence-description">Registro visual de los trabajos realizados por nuestro personal.</p></div>
+                </article>
+
+                <article class="evidence-card">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia%2015.png" data-alt="Evidencia de trabajos realizados | COPS Control de Plagas">
+                        <span class="evidence-index">14</span>
+                        <div class="evidence-empty"><i class="fa-regular fa-image text-4xl text-cops-500" aria-hidden="true"></i><span class="font-bold text-sm">Evidencia de trabajo realizado</span><span class="evidence-file">evidencia 15.png</span></div>
+                    </div>
+                    <div class="evidence-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SERVICIO EN CAMPO</span><span class="evidence-reference">REGISTRO 14</span></div><h3 class="evidence-title">Evidencia de trabajo realizado</h3><p class="evidence-description">Registro fotográfico de un servicio realizado por COPS Control de Plagas.</p></div>
+                </article>
+
+                <!-- Los videos están en la misma carpeta que index.html. -->
                 <article class="evidence-video-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia-video-1.mp4" data-alt="Video de termonebulización para insectos voladores realizado por COPS">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia-video-1.mp4" data-alt="Video de un servicio realizado por COPS Control de Plagas">
                         <span class="evidence-index">VIDEO 01</span>
-                        <div class="evidence-empty">
-                            <i class="fa-solid fa-circle-play text-5xl" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Video de trabajo</span>
-                            <span class="evidence-file">evidencia-video-1.mp4</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-solid fa-circle-play text-5xl" aria-hidden="true"></i><span class="font-bold text-sm">Video de trabajo realizado</span><span class="evidence-file">evidencia-video-1.mp4</span></div>
                     </div>
-                    <div class="evidence-video-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-film" aria-hidden="true"></i> REGISTRO AUDIOVISUAL</span>
-                            <span class="evidence-reference text-green-100">01 / 02</span>
-                        </div>
-                        <h3 class="evidence-title">Procedimiento de control de plagas</h3>
-                        <p class="evidence-description">Video de un servicio realizado por el equipo COPS.</p>
-                    </div>
+                    <div class="evidence-video-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-film" aria-hidden="true"></i> REGISTRO AUDIOVISUAL</span><span class="evidence-reference">VIDEO 01 / 02</span></div><h3 class="evidence-title">Procedimiento de control de plagas</h3><p class="evidence-description">Registro audiovisual de un servicio realizado por el equipo COPS.</p></div>
                 </article>
 
-                <!-- VIDEO 02 -->
                 <article class="evidence-video-card">
-                    <div class="evidence-media" data-evidence-media data-file="evidencias/evidencia-video-2.mp4" data-alt="Video de trabajos realizados por COPS Control de Plagas">
+                    <div class="evidence-media" data-evidence-media data-file="evidencia-video-2.mp4" data-alt="Video de trabajos realizados por COPS Control de Plagas">
                         <span class="evidence-index">VIDEO 02</span>
-                        <div class="evidence-empty">
-                            <i class="fa-solid fa-circle-play text-5xl" aria-hidden="true"></i>
-                            <span class="font-bold text-sm">Video de trabajo</span>
-                            <span class="evidence-file">evidencia-video-2.mp4</span>
-                        </div>
+                        <div class="evidence-empty"><i class="fa-solid fa-circle-play text-5xl" aria-hidden="true"></i><span class="font-bold text-sm">Video de trabajo realizado</span><span class="evidence-file">evidencia-video-2.mp4</span></div>
                     </div>
-                    <div class="evidence-video-info">
-                        <div class="evidence-topline">
-                            <span class="evidence-category"><i class="fa-solid fa-film" aria-hidden="true"></i> REGISTRO AUDIOVISUAL</span>
-                            <span class="evidence-reference text-green-100">02 / 02</span>
-                        </div>
-                        <h3 class="evidence-title">Trabajos realizados en campo</h3>
-                        <p class="evidence-description">Muestra audiovisual de los servicios de COPS Control de Plagas.</p>
-                    </div>
+                    <div class="evidence-video-info"><div class="evidence-topline"><span class="evidence-category"><i class="fa-solid fa-film" aria-hidden="true"></i> REGISTRO AUDIOVISUAL</span><span class="evidence-reference">VIDEO 02 / 02</span></div><h3 class="evidence-title">Trabajos realizados en campo</h3><p class="evidence-description">Muestra audiovisual de los servicios de COPS Control de Plagas.</p></div>
                 </article>
             </div>
 
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-cops-100 bg-white px-5 py-4 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-cops-100 text-cops-700">
-                        <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
-                    </span>
-                    <div>
-                        <p class="font-bold text-cops-900 text-sm">¿Quieres conocer más sobre nuestros servicios?</p>
-                        <p class="text-xs text-gray-500">Solicita información directamente con nuestro equipo.</p>
-                    </div>
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-cops-100 text-cops-700"><i class="fa-solid fa-folder-open" aria-hidden="true"></i></span>
+                    <div><p class="font-bold text-cops-900 text-sm">¿Necesitas información sobre alguno de estos servicios?</p><p class="text-xs text-gray-500">Contacta directamente con nuestro equipo.</p></div>
                 </div>
-                <a href="https://wa.me/5219988541612?text=Hola%20COPS%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20sus%20trabajos%20realizados."
-                   target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center justify-center gap-2 rounded-xl bg-cops-600 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-cops-700">
-                    <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Consultar por WhatsApp
-                </a>
+                <a href="https://wa.me/5219988541612?text=Hola%20COPS%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20sus%20trabajos%20realizados." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-cops-600 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-cops-700"><i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Consultar por WhatsApp</a>
             </div>
         </div>
     </section>
@@ -1251,7 +1184,7 @@
                 <!-- Col 1: Brand -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="cops.png" alt="Logotipo oficial de COPS Control de Plagas" class="w-12 h-12 object-contain" width="48" height="48" loading="lazy">
+                        <img src="policias.png" alt="Logotipo oficial de COPS Control de Plagas" class="w-12 h-12 object-contain" width="48" height="48" loading="lazy">
                         <span class="text-xl font-black tracking-tight">COPS CONTROL</span>
                     </div>
                     <p class="text-xs text-cops-200 leading-relaxed">
@@ -1290,7 +1223,7 @@
                         </li>
                         <li class="flex items-center gap-2.5">
                             <i class="fa-brands fa-whatsapp text-cops-400"></i>
-                            <a href="https://wa.me/5219988541612" target="_blank" rel="noopener noreferrer" class="hover:underline">+52 1 998 152 3517</a>
+                            <a href="https://wa.me/5219988541612" target="_blank" rel="noopener noreferrer" class="hover:underline">+52 998 854 1612</a>
                         </li>
                         <li class="flex items-center gap-2.5">
                             <i class="fa-solid fa-envelope text-cops-400"></i>
@@ -1317,7 +1250,7 @@
             </div>
 
             <div class="pt-12 mt-12 border-t border-cops-800 text-center text-xs text-cops-300 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p>&copy; 2026 COPS Control de Plagas. Todos los derechos reservados. Empresa mexicana.</p>
+                <p>&copy; <span id="current-year">2026</span> COPS Control de Plagas. Todos los derechos reservados. Empresa mexicana.</p>
                 <div class="flex gap-4">
                     <span>Atención en Cancún y Quintana Roo</span>
                 </div>
@@ -1342,7 +1275,7 @@
             <div class="bg-gradient-to-r from-cops-800 to-cops-600 text-white p-4 flex items-center justify-between">
                 <div class="flex items-center gap-3">
                     <div class="relative">
-                        <img src="cops.png" alt="" class="w-10 h-10 rounded-full bg-white object-contain p-1 shadow" width="40" height="40" loading="lazy">
+                        <img src="policias.png" alt="" class="w-10 h-10 rounded-full bg-white object-contain p-1 shadow" width="40" height="40" loading="lazy">
                         <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-cops-800"></span>
                     </div>
                     <div>
@@ -1362,7 +1295,7 @@
                 
                 <!-- Welcome Bot Message -->
                 <div class="flex items-start gap-2 max-w-[85%]">
-                    <img src="cops.png" alt="" class="w-7 h-7 rounded-full bg-white object-contain p-0.5 shrink-0" width="28" height="28">
+                    <img src="policias.png" alt="" class="w-7 h-7 rounded-full bg-white object-contain p-0.5 shrink-0" width="28" height="28">
                     <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-gray-800 border border-gray-100 space-y-1">
                         <p class="font-semibold text-cops-800">¡Hola! 👋 Bienvenido a COPS Control de Plagas.</p>
                         <p>Te orientamos sobre nuestros servicios de control de plagas en Cancún y Quintana Roo. 🌿</p>
@@ -1412,6 +1345,10 @@
     <!-- JAVASCRIPT: navegación, FAQ, solicitud de cotización y asistente -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Actualiza automáticamente el año del aviso legal.
+            const yearNode = document.getElementById('current-year');
+            if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
             // Datos de contacto: el teléfono y WhatsApp son líneas distintas.
             const WHATSAPP_NUMBER = '5219988541612';
             const PHONE_NUMBER = '+529981523517';
@@ -1544,7 +1481,7 @@
 
                 if (!isUser) {
                     const avatar = document.createElement('img');
-                    avatar.src = 'cops.png';
+                    avatar.src = 'policias.png';
                     avatar.alt = '';
                     avatar.width = 28;
                     avatar.height = 28;
